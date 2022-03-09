@@ -61,7 +61,7 @@ def generateprofile(df,Mean,StDev):
     df3['Location']=loca
 
     #License_id
-    lic= ''.join(random.choices(string.ascii_letters + string.digits, k=25))
+    lic= random.randint(1000000,5000000)
     df3['License_id']=lic
 
     ###Time
