@@ -210,8 +210,7 @@ path="/usr/users/gpusdi1/gpusdi1_39/Test"
 customer_encodings = {"Location": GenresEncoder()}
 product_encodings = {  # "brand": SequenceEncoder(),
         "price": IdentityEncoder(dtype=torch.long),
-        "category_id": IdentityEncoder(dtype=torch.long),
-        # "category_code": SequenceEncoder()
+        "category_id": IdentityEncoder(dtype=torch.long)
 }
 session_encodings = {
         "Session_id": SequenceEncoder(),
