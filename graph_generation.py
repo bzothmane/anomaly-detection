@@ -13,7 +13,7 @@ from os import walk
 def encode_column(df,col,encoder,checkpoint):
     if col in checkpoint.keys():
         init_batch= checkpoint[col]['batch']
-        with open(str(col)+"_encoding.pkl", 'rb') as f:
+        with open("10M/"+str(col)+"_encoding.pkl", 'rb') as f:
             var =pk.load(f)
     else:
         init_batch=0
@@ -198,13 +198,14 @@ def display_csv(path):
 print("device")
 device = 'cuda:2' if torch.cuda.is_available() else 'cpu'
 print( "device", device)
-database_path = "data_out_10000.csv"
-fake="fake_data_2.csv"
+database_path = "data_out_10M.csv"
+fake="fake_data.csv"
 print('get data')
 dataframe = pd.read_csv(database_path).fillna("")
 print(dataframe.shape)
-fake = pd.read_csv(fake).fillna("")
-dataframe=pd.concat([dataframe,fake])
+#fake = pd.read_csv(fake).fillna("")
+#dataframe=pd.concat([dataframe,fake])
+print(dataframe.shape)
 path="/usr/users/gpusdi1/gpusdi1_39/Test"
 
 customer_encodings = {"Location": GenresEncoder()}
@@ -216,7 +217,6 @@ session_encodings = {
         "Session_id": SequenceEncoder(),
         "Session_start_datetime": DateTimeEncoder(dtype=torch.long),
         "Session_end_datetime": DateTimeEncoder(dtype=torch.long),
-        "event_type": SequenceEncoder(),
         "user_id": IdentityEncoder(dtype=torch.long)
 }
 licence_encodings = {
