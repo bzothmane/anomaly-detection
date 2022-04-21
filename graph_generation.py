@@ -205,12 +205,12 @@ dataframe = pd.read_csv(database_path).fillna("")
 print(dataframe.shape)
 #fake = pd.read_csv(fake).fillna("")
 #dataframe=pd.concat([dataframe,fake])
-dataframe['Lattitude']=dataframe['Location'].apply(lambda x : float(x.split(',')[0][1:]))
-dataframe['Longitude']=dataframe['Location'].apply(lambda x : float(x.split(',')[1][:-1]))
+dataframe['latitude']=dataframe['Location'].apply(lambda x : float(x.split(',')[0][1:]))
+dataframe['longitude']=dataframe['Location'].apply(lambda x : float(x.split(',')[1][:-1]))
 print(dataframe.shape)
 path="/usr/users/gpusdi1/gpusdi1_39/Test"
 
-customer_encodings = {{"Lattitude": IdentityEncoder(dtype=torch.long),"Longitude":IdentityEncoder(dtype=torch.long)}}
+customer_encodings = {{"latitude": IdentityEncoder(dtype=torch.long),"longitude":IdentityEncoder(dtype=torch.long)}}
 product_encodings = { "brand": SequenceEncoder(),
         "price": IdentityEncoder(dtype=torch.long),
         "category_id": IdentityEncoder(dtype=torch.long)
