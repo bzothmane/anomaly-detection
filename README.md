@@ -7,6 +7,7 @@ On your node gpu, please excute these commands to download datasets.
 wget https://www.kaggle.com/datasets/mkechinov/ecommerce-events-history-in-cosmetics-shop/download
 
 Once you have downloaded them, use these commands to unzip. This may take some time, please wait with your patience.
+
 tar -xzf archive.tar.gz
 
 ## Preprocessing 
