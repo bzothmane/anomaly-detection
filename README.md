@@ -1,4 +1,4 @@
-# PFE
+# Anomaly Detection In Graphs
 
 ## Download Data
 
@@ -28,7 +28,7 @@ In order to simulate fraudulous activity in the costumer base. We excute the cod
 - On the file batch.sh 
     - we put the command python3 graph_Generation.py
 
-- we excute the command bash run.sh sbatch
+- we excute the command : bash run.sh sbatch
 
 ## Embedding 
 
