@@ -16,7 +16,7 @@ We excute the notebook Data_Base.ipynb to get a file named data_out.csv : We mer
 
 ## Fake Data Generation
 
-I n order to simulate fraudulous activity in the costumer base. We excute the code Data_Generation.py.
+In order to simulate fraudulous activity in the costumer base. We excute the code Data_Generation.py.
 
 ## Graph Generation
 
